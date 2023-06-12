@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Credit-card</title>
+  </head>
+  <body>
+    <div class="gradient-container">
+      <div class="front-card">
+        <div class="image"></div>
+        <div class="card-info">
+          <div class="card-number">
+            <p id="showcardNumber">0000 0000 0000 0000</p>
+          </div>
+          <div class="card-name-date">
+            <p id="showcardName">JANE APPLESEED</p>
+            <p><span id="showmonth">00</span><span id="showyear">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="back-card">
+        <p id="showcvc">000</p>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="thanks-msg">
+        <div class="final-image"></div>
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
+      <form>
+        <div class="inputs">
+          <label for="cardName">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            id="cardName"
+            placeholder="e.g Jane Appleseed"
+            maxlength="20"
+          />
+          <p class="errorMsg" id="cardNameError"></p>
+        </div>
+        <div class="inputs">
+          <label for="cardNumber">CARD NUMBER</label>
+          <input
+            type="text"
+            id="cardNumber"
+            placeholder="e.g 1234 5678 9123 0000"
+            maxlength="16"
+          />
+          <p class="errorMsg" id="cardNumberError"></p>
+        </div>
+        <div class="inputs">
+          <div class="exp">
+            <label for="expDate">EXP. DATE (MM/YY)</label>
+            <div class="exp-date" id="expDate">
+              <div class="column">
+                <input type="text" id="month" placeholder="MM" maxlength="2" />
+                <p class="errorMsg" id="monthError"></p>
+              </div>
+              <div class="column">
+                <input type="text" id="year" placeholder="YY" maxlength="2" />
+                <p class="errorMsg" id="yearError"></p>
+              </div>
+            </div>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3" />
+            <p class="errorMsg" id="cvcError"></p>
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+  </body>
+</html>
